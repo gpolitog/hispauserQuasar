@@ -22,6 +22,8 @@ module.exports = {
   // add your custom rules here
   'rules': {
     // allow paren-less arrow functions
+    // 'indent': 0,
+    'no-unused-vars': 0,
     'arrow-parens': 0,
     'one-var': 0,
     // allow debugger during development

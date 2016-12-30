@@ -1,134 +1,123 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-
 Vue.use(Vuex)
 
 const state = {
   count: 0,
-  features: [{
-    id:0,
-    done: true,
-    title: 'Llama al Doctor',
-    subtitle: 'Lorem ipsum dolor.',
-    description: 'Lorem ipsum dolor sit.',
-    mainroute: 'llama-al-doctor',
-    actions:[{
-      title: 'accion 1',
-      route: '/ingresar',
-      callback : function(){
-        console.log("1");
-      }
-    },
+  currentPageTitle: null,
+  features: [
     {
-      title: 'accion 2',
-      route: '/ingresar',
-      callback : function(){
-        console.log("2");
-      }
-    }]
-  },{
-    id:1,
-    title: 'Red de Descuentos',
-    subtitle: 'Lorem ipsum dolor.',
-    description: 'Lorem ipsum dolor sit.',
-    mainroute: 'red-de-descuentos',
-    actions:[{
-      title: 'accion 1',
-      route: '/ingresar',
-      callback : function(){
-        console.log("1");
-      }
-    },
-    {
-      title: 'accion 2',
-      route: '/ingresar',
-      callback : function(){
-        console.log("2");
-      }
-    }]
-  },{
-    id:2,
-    title: 'Salud Dental',
-    subtitle: 'Lorem ipsum dolor.',
-    description: 'Lorem ipsum dolor sit.',
-    mainroute: 'salud-dental',
-    actions:[{
-      title: 'accion 1',
-      route: '/ingresar',
-      callback : function(){
-        console.log("1");
-      }
-    },
-    {
-      title: 'accion 2',
-      route: '/ingresar',
-      callback : function(){
-        console.log("2");
-      }
-    }]
-  },{
-    id:3,
-    title: 'Salud Visual',
-    subtitle: 'Lorem ipsum dolor.',
-    description: 'Lorem ipsum dolor sit.',
-    mainroute: 'salud-visual',
-    actions:[{
-        title: 'accion 1',
-        route: '/ingresar',
-        callback : function(){
-          console.log("1");
+      id: 0,
+      done: true,
+      title: 'Llama al Doctor',
+      subtitle: 'Lorem ipsum dolor.',
+      description: 'Lorem ipsum dolor sit.',
+      mainroute: 'llama-al-doctor',
+      actions: [
+        {
+          title: 'accion 1',
+          route: '/ingresar'
+        },
+        {
+          title: 'accion 2',
+          route: '/ingresar'
         }
-      },
-      {
-        title: 'accion 2',
-        route: '/ingresar',
-        callback : function(){
-          console.log("2");
-        }
-      }]
-  },{
-    id:4,
-    title: 'Repatriación funeraria',
-    subtitle: 'Lorem ipsum dolor.',
-    description: 'Lorem ipsum dolor sit.',
-    mainroute: 'repatriacion-funeraria',
-    actions:[{
-      title: 'accion 1',
-      route: '/ingresar',
-      callback : function(){
-        console.log("1");
-      }
+      ]
     },
     {
-      title: 'accion 2',
-      route: '/ingresar',
-      callback : function(){
-        console.log("2");
-      }
-    }]
-  }]
+      id: 1,
+      title: 'Red de Descuentos',
+      subtitle: 'Lorem ipsum dolor.',
+      description: 'Lorem ipsum dolor sit.',
+      mainroute: 'red-de-descuentos',
+      actions: [
+        {
+          title: 'accion 1',
+          route: '/ingresar'
+        },
+        {
+          title: 'accion 2',
+          route: '/ingresar'
+        }
+      ]
+    },
+    {
+      id: 2,
+      title: 'Salud Dental',
+      subtitle: 'Lorem ipsum dolor.',
+      description: 'Lorem ipsum dolor sit.',
+      mainroute: 'salud-dental',
+      actions: [
+        {
+          title: 'accion 1',
+          route: '/ingresar'
+        },
+        {
+          title: 'accion 2',
+          route: '/ingresar'
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: 'Salud Visual',
+      subtitle: 'Lorem ipsum dolor.',
+      description: 'Lorem ipsum dolor sit.',
+      mainroute: 'salud-visual',
+      actions: [
+        {
+          title: 'accion 1',
+          route: '/ingresar'
+        },
+        {
+          title: 'accion 2',
+          route: '/ingresar'
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: 'Repatriación funeraria',
+      subtitle: 'Lorem ipsum dolor.',
+      description: 'Lorem ipsum dolor sit.',
+      mainroute: 'repatriacion-funeraria',
+      actions: [
+        {
+          title: 'accion 1',
+          route: '/ingresar'
+        },
+        {
+          title: 'accion 2',
+          route: '/ingresar'
+        }
+      ]
+    }
+  ]
 }
 
 const mutations = {
-  INCREMENT(state) {
+  INCREMENT (state) {
     state.count++
   },
-  DECREMENT(state) {
+  DECREMENT (state) {
     state.count--
+  },
+  ACTUALIZATITULO (state, message) {
+    state.currentPageTitle = message
   }
 }
+
 const getters = {
-  doneTodos: state => {
-      var url = state.route.params.beneficio
-      // return url
-      return state.features.filter(feature => feature.mainroute === url)
+  currentProduct: state => {
+    var url = state.route.params.producto // return url
+    return state.features.filter(feature => feature.mainroute === url)
   },
-  currentUrl: state => state.route.params.beneficio
+  currentUrl: state => state.route.params.producto
 }
 
 const actions = {
-  incrementAsync({commit}) {
+  incrementAsync ({ commit }) {
     setTimeout(() => {
       commit('INCREMENT')
     }, 200)

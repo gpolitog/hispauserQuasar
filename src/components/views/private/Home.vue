@@ -8,7 +8,7 @@
       <i>menu</i>
     </button>
       <q-toolbar-title :padding="1">
-        Usuariooooooo
+        Usuariooooooo -- > {{ titulopagina }}
       </q-toolbar-title>
     </div>
 
@@ -39,6 +39,11 @@ export default {
   data () {
     return {
       test: 'probando'
+    }
+  },
+  computed: {
+    titulopagina () {
+      return this.$store.state.currentPageTitle
     }
   },
   components: {
