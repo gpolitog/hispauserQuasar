@@ -1,10 +1,86 @@
 <template>
   <!-- root node required -->
   <div>
-    <!-- your content -->
-    <div class="layout-padding">
-      <!-- if you want automatic padding -->
-        <h1>registrando</h1>
+    <div id="login">
+      <div class="login-block">
+        <div class="card">
+          <div class="card-title">
+            <big>Registra tu cuenta Hispano Club</big>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, suscipit?
+            </p>
+          </div>
+          <div class="card-content">
+            <form action="">
+              <div class="floating-label">
+                <input required class="full-width">
+                <label>Usuario</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label>Correo electrónico</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Nombre</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Apellido</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Teléfono</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Edad</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Número de tarjeta Hispano Club</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label>Contraseña</label>
+              </div>
+
+              <div class="floating-label">
+                <input required class="full-width">
+                <label for="">Repetir contraseña</label>
+              </div>
+
+              <label>
+                <q-checkbox></q-checkbox>
+                Checkbox Label
+              </label>
+
+            </form>
+          </div>
+          <div class="card-actions text-right">
+            <button class="white block">
+              Cancelar
+            </button>
+
+            <button class="white block"  v-link=" '/ingresar' ">
+              Ingresar
+            </button>
+            
+            <button class="primary raised block">
+              Registrar
+            </button>
+
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,5 +93,30 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  $bg: #cbcbc;
+  $white: #ffffff; 
+  #login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    background:url('/statics/gplaypattern.png') repeat;
+    .login-block {
+      min-width: 40%;
+      max-width: 90%;
+      background: $white;
+      img.logo {
+        display:block;
+        max-width:200px;
+        margin:0 auto;
+        padding:10px;
+      }
+      .card {
+        .card-actions {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
 </style>
