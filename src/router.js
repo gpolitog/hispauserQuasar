@@ -42,6 +42,10 @@ export default new VueRouter({
       component: Home,
       children: [
         {
+          path: 'productos',
+          component: generic
+        },
+        {
           path: 'productos/:producto',
           component: generic
         }

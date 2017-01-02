@@ -52,6 +52,9 @@ export default {
 }
 </script>
 
-<style lang="styl">
+<style lang="scss">
+body {
+  background:url('/statics/gplaypattern.png') repeat;
+}
 
 </style>
