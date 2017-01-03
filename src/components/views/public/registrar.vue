@@ -72,12 +72,12 @@
             <button class="white block"  v-link=" '/ingresar' ">
               Ingresar
             </button>
-            
+
             <button class="primary raised block">
               Registrar
             </button>
 
-            
+
           </div>
         </div>
       </div>
@@ -94,29 +94,4 @@ export default {
 </script>
 
 <style lang="scss">
-  $bg: #cbcbc;
-  $white: #ffffff; 
-  #login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height:100vh;
-    background:url('/statics/gplaypattern.png') repeat;
-    .login-block {
-      min-width: 40%;
-      max-width: 90%;
-      background: $white;
-      img.logo {
-        display:block;
-        max-width:200px;
-        margin:0 auto;
-        padding:10px;
-      }
-      .card {
-        .card-actions {
-          justify-content: flex-end;
-        }
-      }
-    }
-  }
 </style>

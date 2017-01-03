@@ -29,9 +29,10 @@
   @import './../../stylesheets/mixins/_spacing.scss';
 
   .header-visual {
-    background-image: url('/statics/happy-woman-40s.jpg');
-    background-size: cover;
-    min-height:200px;
+    // background-image: url('/statics/happy-woman-40s.jpg');
+    // background-size: cover;
+    min-height:100px;
     position: relative;
+    color:white;
   }
 </style>

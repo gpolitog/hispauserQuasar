@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <div slot="header" class="toolbar inverted primary">
+    <div slot="header" class="toolbar">
       <button
       class=""
       @click="$refs.drawer.open()"
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     ontoy () {
-      console.log('estas aquí' + this.$route.path)
+      // console.log('estas aquí', this.$store.state)
     }
   },
   components: {

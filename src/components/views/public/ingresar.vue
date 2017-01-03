@@ -29,7 +29,7 @@
               <p>
                 <router-link :to="{path: '/usuario'}">
                   <span>¿Olvidaste tu contraseña?</span>
-                </router-link>  
+                </router-link>
               </p>
             </form>
           </div>
@@ -44,7 +44,7 @@
               Ingresar
             </button>
 
-            
+
           </div>
         </div>
       </div>
@@ -62,13 +62,15 @@ export default {
 
 <style lang="scss">
   $bg: #cbcbc;
-  $white: #ffffff; 
+  $white: #ffffff;
   #login {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height:100vh;
-    background:url('/statics/gplaypattern.png') repeat;
+    background-image: url('/statics/pexels-photo-129029-1.jpeg');
+    // background-size: cover;
+    // background:url('/statics/gplaypattern.png') repeat;
     .login-block {
       min-width: 40%;
       background: $white;

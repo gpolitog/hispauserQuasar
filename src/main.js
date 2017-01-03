@@ -26,3 +26,30 @@ Quasar.start(() => {
     render: h => h(require('./App'))
   })
 })
+
+router.beforeEach((to, from, next) => {
+  Vue.nextTick(function () {
+    /*
+    *  Agregar clase al body segun la ruta destino
+    */
+
+    var destino = to.name // ruta de destino desde el beforeEach
+    var origen = from.name // ruta de origen desde el beforeEach
+
+    /*
+    *  Si el orign es undefined (Ej. Home) se agrega clase temporal
+    */
+    if (origen === undefined) {
+      document.body.className += ' saltando'
+      origen = 'saltando'
+    }
+
+    /*
+    *  Switch de class del body reemaplazando el origen por el destino
+    */
+    document.body.className = document.body.className.replace(origen, destino)
+
+    // Salida del beforeEach - Mandatorio
+    next()
+  })
+})

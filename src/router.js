@@ -31,28 +31,32 @@ export default new VueRouter({
     // { path: '*', component: load('Error404') }, // Not found
     {
       path: '/ingresar',
-      component: ingresar
+      component: ingresar,
+      name: 'ingresar'
     }, // Not found
     {
       path: '/registrar',
-      component: registrar
+      component: registrar,
+      name: 'registrar'
     }, // Not found
     {
       path: '/usuario',
       component: Home,
+      name: 'usuario',
       children: [
         {
           path: 'productos',
-          // component: generic
           components: {
             main: generic
-          }
+          },
+          name: 'productos'
         },
         {
           path: 'productos/:producto',
           components: {
             main: generic
-          }
+          },
+          name: 'producto'
         }
       ]
     } // Not found
