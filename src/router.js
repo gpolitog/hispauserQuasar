@@ -43,11 +43,16 @@ export default new VueRouter({
       children: [
         {
           path: 'productos',
-          component: generic
+          // component: generic
+          components: {
+            main: generic
+          }
         },
         {
           path: 'productos/:producto',
-          component: generic
+          components: {
+            main: generic
+          }
         }
       ]
     } // Not found

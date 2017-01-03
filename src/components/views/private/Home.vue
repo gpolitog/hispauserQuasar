@@ -12,8 +12,6 @@
       </q-toolbar-title>
     </div>
 
-    
-    
     <!-- <q-drawer ref="drawer" swipe-only> -->
     <q-drawer ref="drawer" >
       <div class="toolbar">
@@ -23,38 +21,52 @@
       </div>
       <drawerMenu>
       </drawerMenu>
-
     </q-drawer>
 
-    <router-view class="layout-view">
-    </router-view>
+    <div class="layout-view">
+      <productosListaCards v-if="this.$route.path === '/usuario'">
+      </productosListaCards>
+
+      <router-view  name="main">
+      </router-view>
+
+      <router-view name="secondary">
+      </router-view>
+
+    </div>
+
     
   </q-layout>
 </template>
 
 <script>
 import drawerMenu from '../../modules/drawerMenu'
+import productosListaCards from '../../modules/productosListaCards'
 
 export default {
   data () {
-    return {
-      test: 'probando'
-    }
+    return {}
+  },
+  created () {
+    this.ontoy()
   },
   computed: {
     titulopagina () {
       return this.$store.state.currentPageTitle
     }
   },
+  methods: {
+    ontoy () {
+      console.log('estas aquí' + this.$route.path)
+    }
+  },
   components: {
-    drawerMenu
+    drawerMenu,
+    productosListaCards
   }
 }
 </script>
 
 <style lang="scss">
-body {
-  background:url('/statics/gplaypattern.png') repeat;
-}
 
 </style>

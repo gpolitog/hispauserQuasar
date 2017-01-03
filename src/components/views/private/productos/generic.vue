@@ -1,19 +1,22 @@
 <template>
   <div>
-    <div class="cont" v-for="item in post">
-      <h1> Desde el for {{  item.title  }}</h1>
-
-      <h2> desde el store {{ titulopagina }}</h2>
-      <div v-for="action in item.actions" >
-        <a>
-          {{ action.title }}
-        </a>
+    <div class="page-content" v-for="item in post">
+      <pageHeader :pageTitle=" item.title " :pageDescription="item.description" >
+      </pageHeader>
+      <div class="layout-padding">
+        <div v-for="action in item.actions" >
+          <a>
+            {{ action.title }}
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import pageHeader from '../../../modules/pageHeader'
+
   export default {
     data () {
       return {
@@ -43,9 +46,9 @@
         })
         this.$store.commit('ACTUALIZATITULO', current)
       }
+    },
+    components: {
+      pageHeader
     }
 }
 </script>
-
-<style>
-</style>
