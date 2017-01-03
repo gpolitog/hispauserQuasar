@@ -78,11 +78,6 @@ export default {
         margin:0 auto;
         padding:10px;
       }
-      .card {
-        .card-actions {
-          justify-content: flex-end;
-        }
-      }
     }
   }
 </style>

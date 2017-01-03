@@ -9,7 +9,7 @@
     </q-drawer-link>
 
     <q-drawer-link icon="mail" :to="{path: '/usuario', exact: true}">
-      usuario
+      Usuario
     </q-drawer-link>
     <q-drawer-link icon="mail" :to="{path: '/usuario/productos', exact: true}">
       Productos
