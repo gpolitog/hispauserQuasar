@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <div slot="header" class="toolbar">
+    <div slot="header" class="toolbar inverted primary">
       <button
       class=""
       @click="$refs.drawer.open()"
