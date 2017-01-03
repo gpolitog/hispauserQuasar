@@ -35,7 +35,7 @@
 
     </div>
 
-    
+
   </q-layout>
 </template>
 
@@ -68,5 +68,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
