@@ -8,12 +8,12 @@
       <i>menu</i>
     </button>
       <q-toolbar-title :padding="1">
-        Usuariooooooo -- > {{ titulopagina }}
+        Hispano Club - {{ titulopagina }}
       </q-toolbar-title>
     </div>
 
-    <!-- <q-drawer ref="drawer" swipe-only> -->
-    <q-drawer ref="drawer" >
+    <q-drawer ref="drawer" swipe-only>
+    <!-- <q-drawer ref="drawer" > -->
       <div class="toolbar">
         <q-toolbar-title>
           Drawer Title

@@ -63,7 +63,7 @@ export default {
         margin: 1%;
       }
       @include breakpoint(lg) {
-        width: 23%;
+        width: 18%;
         margin: 1%;
       }
     }

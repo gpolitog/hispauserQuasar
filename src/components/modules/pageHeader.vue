@@ -26,7 +26,6 @@
 </script>
 
 <style lang="scss">
-  @import './../../stylesheets/mixins/_spacing.scss';
 
   .header-visual {
     // background-image: url('/statics/happy-woman-40s.jpg');

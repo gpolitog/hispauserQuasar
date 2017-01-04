@@ -1,7 +1,8 @@
 <template>
   <div class="page-content">
-      <pageHeader pageTitle="Usuarios" pageDescription="" >
-      </pageHeader>
+      <pageHeaderUser pageTitle="Usuarios" pageDescription="" >
+      </pageHeaderUser>
+
       <div class="layout-padding">
         <div class="infinite-scroll-activated">
           <div class="card infinite-item" v-for="feature in features">
@@ -12,7 +13,7 @@
             <div class="card-actions text-right">
               <button v-for="action in feature.actions"  class="white block"  v-link=" '/usuario/productos/' + feature.mainroute " >
                 {{ action.title }}
-              </button>            
+              </button>
             </div>
           </div>
         </div>
@@ -21,7 +22,7 @@
 </template>
 
 <script>
-  import pageHeader from './pageHeader'
+  import pageHeaderUser from './pageHeaderUser'
   export default {
     data () {
       return {
@@ -29,7 +30,7 @@
       }
     },
     components: {
-      pageHeader
+      pageHeaderUser
     }
   }
 </script>

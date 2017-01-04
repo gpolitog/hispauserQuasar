@@ -6,10 +6,45 @@ Vue.use(Vuex)
 const state = {
   count: 0,
   currentPageTitle: null,
+  user: {
+    id: 756474,
+    name: 'Zairuchis',
+    lastname: 'Zairuch',
+    motherlastname: 'Zairuvich',
+    membresia: {
+      id: 9099,
+      status: 'active', // inactive
+      life: {
+        activation: '',
+        expiration: ''
+      },
+      kind: {
+        type: 'family',  // individual
+        subtype: 'plus' // o estandar
+      },
+      // family ->
+      noasignados: 2,
+      asignados: [
+        {
+          id: 0,
+          name: 'Zairuchis',
+          lastname: 'Paterno',
+          motherlastname: 'Materno',
+          status: 'active', // inactive
+          card: {
+            id: 8799,
+            type: 'digital', // fisica
+            kind: 'individual',
+            number: '8767876787678767',
+            status: 'active'
+          }
+        }
+      ]
+    }
+  },
   features: [
     {
       id: 0,
-      done: true,
       title: 'Llama al Doctor',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',

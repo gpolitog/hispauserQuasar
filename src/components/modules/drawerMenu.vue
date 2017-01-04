@@ -8,10 +8,10 @@
       Registrar
     </q-drawer-link>
 
-    <q-drawer-link icon="mail" :to="{path: '/usuario'}">
+    <q-drawer-link icon="mail" :to="{path: '/usuario', exact: true}">
       Usuario
     </q-drawer-link>
-    <q-drawer-link icon="mail" :to="{path: '/usuario/productos'}">
+    <q-drawer-link icon="mail" :to="{path: '/usuario/productos', exact: true}">
       Productos
     </q-drawer-link>
 

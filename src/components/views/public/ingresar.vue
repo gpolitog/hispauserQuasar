@@ -73,7 +73,9 @@ export default {
     // background:url('/statics/gplaypattern.png') repeat;
     .login-block {
       min-width: 40%;
-      background: $white;
+      .card {
+        background: $white;
+      }
       img.logo {
         display:block;
         max-width:200px;
