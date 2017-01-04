@@ -8,6 +8,11 @@
       Registrar
     </q-drawer-link>
 
+
+    <q-drawer-link icon="mail" :to="{path: '/recuperar-contrasena', exact: true}">
+      Recuperar Contrasena
+    </q-drawer-link>
+
     <q-drawer-link icon="mail" :to="{path: '/usuario', exact: true}">
       Usuario
     </q-drawer-link>

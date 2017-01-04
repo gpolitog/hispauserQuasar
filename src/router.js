@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 // import Index from './components/Index'
 import ingresar from './components/views/public/ingresar'
 import registrar from './components/views/public/registrar'
+import recuperarContrasena from './components/views/public/recuperarContrasena'
 import Home from './components/views/private/Home'
 import generic from './components/views/private/productos/generic'
 
@@ -33,17 +34,29 @@ export default new VueRouter({
       path: '/ingresar',
       component: ingresar,
       name: 'ingresar'
-    }, // Not found
+    },
     {
       path: '/registrar',
       component: registrar,
       name: 'registrar'
-    }, // Not found
+    },
+    {
+      path: '/recuperar-contrasena',
+      component: recuperarContrasena,
+      name: 'recuperar-contrasena'
+    },
     {
       path: '/usuario',
       component: Home,
       name: 'usuario',
       children: [
+        {
+          path: 'perfil',
+          components: {
+            main: generic
+          },
+          name: 'Perfil'
+        },
         {
           path: 'productos',
           components: {

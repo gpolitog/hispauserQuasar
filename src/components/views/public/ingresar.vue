@@ -26,11 +26,11 @@
                 <input required class="full-width">
                 <label>Contraseña</label>
               </div>
-              <p>
-                <router-link :to="{path: '/usuario'}">
+              <div class="padding-s-top padding-s-bottom">
+                <router-link :to="{path: '/recuperar-contrasena'}">
                   <span>¿Olvidaste tu contraseña?</span>
                 </router-link>
-              </p>
+              </div>
             </form>
           </div>
           <div class="card-actions text-right">
@@ -40,7 +40,7 @@
             <button class="white block"  v-link=" '/registrar' ">
               Registrar
             </button>
-            <button class="primary raised block">
+            <button class="primary raised block" v-link=" '/usuario' ">
               Ingresar
             </button>
 
