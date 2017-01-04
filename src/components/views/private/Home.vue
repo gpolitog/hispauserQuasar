@@ -27,8 +27,10 @@
       <productosListaCards v-if="this.$route.path === '/usuario'">
       </productosListaCards>
 
-      <router-view  name="main">
-      </router-view>
+      <q-transition name="slide">
+        <router-view  name="main">
+        </router-view>
+      </q-transition>
 
       <router-view name="secondary">
       </router-view>

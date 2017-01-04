@@ -25,23 +25,23 @@ export default {
   @import '/stylesheets/mixins/_resetText.scss';
 
   body {
-    background-image: url('/statics/pexels-photo-129029-1.jpeg');
+    // background-image: url('/statics/pexels-photo-129029-1.jpeg');
     background-size: cover;
     // background:url('/statics/gplaypattern.png') repeat;
   }
   #q-app {
     position: relative;
     height: 100%;
-    &:before {
-      content: '';
-      background: transparentize(#000000,0.5);
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      z-index: -1;
-    }
+    // &:before {
+    //   content: '';
+    //   background: transparentize(#000000,0.5);
+    //   position: absolute;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   left: 0;
+    //   z-index: -1;
+    // }
   }
   .infinite-scroll-activated {
     display: flex;

@@ -11,7 +11,7 @@ const state = {
     name: 'Zairuchis',
     lastname: 'Zairuch',
     motherlastname: 'Zairuvich',
-    membresia: {
+    membership: {
       id: 9099,
       status: 'active', // inactive
       life: {
@@ -23,11 +23,39 @@ const state = {
         subtype: 'plus' // o estandar
       },
       // family ->
-      noasignados: 2,
-      asignados: [
+      slots: 2,
+      slotsasigned: [
         {
           id: 0,
-          name: 'Zairuchis',
+          name: 'Esteban',
+          lastname: 'Paterno',
+          motherlastname: 'Materno',
+          status: 'active', // inactive
+          card: {
+            id: 8799,
+            type: 'digital', // fisica
+            kind: 'individual',
+            number: '8767876787678767',
+            status: 'active'
+          }
+        },
+        {
+          id: 1,
+          name: 'Pancho',
+          lastname: 'Paterno',
+          motherlastname: 'Materno',
+          status: 'active', // inactive
+          card: {
+            id: 8799,
+            type: 'digital', // fisica
+            kind: 'individual',
+            number: '8767876787678767',
+            status: 'active'
+          }
+        },
+        {
+          id: 2,
+          name: 'Juana',
           lastname: 'Paterno',
           motherlastname: 'Materno',
           status: 'active', // inactive

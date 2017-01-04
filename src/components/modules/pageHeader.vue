@@ -32,6 +32,6 @@
     // background-size: cover;
     min-height:100px;
     position: relative;
-    color:white;
+    // color:white;
   }
 </style>
