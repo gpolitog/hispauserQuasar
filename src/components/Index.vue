@@ -45,6 +45,9 @@ export default {
 }
 </script>
 
-<style lang="styl">
+<style lang="scss">
 
+body {
+  background-image: url('/statics/fondoLogin3.jpg');
+}
 </style>

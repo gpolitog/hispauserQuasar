@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header-visual padding-m">
+    <div class="header-visual padding-m-left padding-xxs-bottom padding-l-top padding-m-right user-info">
       <div class="contenido">
 
         <div class="row gutter sm-column">
@@ -14,9 +14,9 @@
           </itemUserDetail>
 
           <div class="" v-if=" isFamily ">
-            <!-- <div class="md-caption">
-              Tienes un paquete familiar. Tienes espacio para: N miembros más de tu familia
-            </div> -->
+            <div class="md-caption">
+              Tu familia Hispano Club. 3 de 5
+            </div>
             <div class="a">
                 <zaaAvatar class="margin-xs-left zaa-anchor" v-for="member in userData.membership.slotsasigned">
                   <router-link :to="'/usuario/' + member.id">
@@ -98,8 +98,11 @@
 <style lang="scss">
 
   .header-visual {
-    min-height:100px;
     position: relative;
-    // color:white;
+    &.user-info {
+      background-image: linear-gradient(-187deg, #3023AE 0%, #53A0FD 47%, #B4EC51 99%);  
+      color:white;
+    }
+  
   }
 </style>

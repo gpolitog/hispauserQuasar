@@ -68,9 +68,6 @@ export default {
     align-items: center;
     justify-content: center;
     min-height:100vh;
-    background-image: url('/statics/pexels-photo-129029-1.jpeg');
-    // background-size: cover;
-    // background:url('/statics/gplaypattern.png') repeat;
     .login-block {
       min-width: 40%;
       .card {

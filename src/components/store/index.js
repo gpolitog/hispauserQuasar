@@ -6,11 +6,15 @@ Vue.use(Vuex)
 const state = {
   count: 0,
   currentPageTitle: null,
+  session: {
+    token: 98789789
+  },
   user: {
     id: 756474,
     name: 'Zairuchis',
     lastname: 'Zairuch',
     motherlastname: 'Zairuvich',
+    profileComplete: false,
     membership: {
       id: 9099,
       status: 'active', // inactive
@@ -77,13 +81,10 @@ const state = {
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
       mainroute: 'llama-al-doctor',
+      image: '/statics/llama-doctor.jpg',
       actions: [
         {
-          title: 'accion 1',
-          route: '/ingresar'
-        },
-        {
-          title: 'accion 2',
+          title: 'Llamar al Doctor',
           route: '/ingresar'
         }
       ]
@@ -94,13 +95,10 @@ const state = {
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
       mainroute: 'red-de-descuentos',
+      image: '/statics/descuentos.jpg',
       actions: [
         {
-          title: 'accion 1',
-          route: '/ingresar'
-        },
-        {
-          title: 'accion 2',
+          title: 'Buscar descuentos',
           route: '/ingresar'
         }
       ]
@@ -111,13 +109,10 @@ const state = {
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
       mainroute: 'salud-dental',
+      image: '/statics/salud-dental.jpg',
       actions: [
         {
-          title: 'accion 1',
-          route: '/ingresar'
-        },
-        {
-          title: 'accion 2',
+          title: 'Agendar consulta',
           route: '/ingresar'
         }
       ]
@@ -128,13 +123,10 @@ const state = {
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
       mainroute: 'salud-visual',
+      image: '/statics/salud-visual.jpg',
       actions: [
         {
-          title: 'accion 1',
-          route: '/ingresar'
-        },
-        {
-          title: 'accion 2',
+          title: 'Agendar consulta',
           route: '/ingresar'
         }
       ]
@@ -145,13 +137,10 @@ const state = {
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
       mainroute: 'repatriacion-funeraria',
+      image: '/statics/repatriacion.jpg',
       actions: [
         {
-          title: 'accion 1',
-          route: '/ingresar'
-        },
-        {
-          title: 'accion 2',
+          title: 'Solicitar',
           route: '/ingresar'
         }
       ]

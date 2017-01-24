@@ -3,7 +3,7 @@
     <div class="md-caption">
       {{ label }}
     </div>
-    <div class="md-title padding-xxs-top padding-m-bottom">
+    <div class="md-title padding-xs-top ">
       {{ caption }}
     </div>
   </div>

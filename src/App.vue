@@ -25,9 +25,7 @@ export default {
   @import '/stylesheets/mixins/_resetText.scss';
 
   body {
-    // background-image: url('/statics/pexels-photo-129029-1.jpeg');
-    background-size: cover;
-    // background:url('/statics/gplaypattern.png') repeat;
+    background-image: url('/statics/fondoLogin3.jpg');
   }
   #q-app {
     position: relative;

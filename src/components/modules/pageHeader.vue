@@ -28,9 +28,7 @@
 <style lang="scss">
 
   .header-visual {
-    // background-image: url('/statics/happy-woman-40s.jpg');
-    // background-size: cover;
-    min-height:100px;
+    // min-height:100px;
     position: relative;
     // color:white;
   }

@@ -6,12 +6,13 @@
       <div class="layout-padding">
         <div class="infinite-scroll-activated">
           <div class="card infinite-item" v-for="feature in features">
-            <img src="../../statics/happy-woman-40s.jpg">
+            <img :src="feature.image" alt="" v-if="feature.image">
+            <img src="../../statics/happy-woman-40s.jpg" v-else>
             <div class="card-content">
               {{ feature.title }}
             </div>
             <div class="card-actions text-right">
-              <button v-for="action in feature.actions"  class="white block"  v-link=" '/usuario/productos/' + feature.mainroute " >
+              <button v-for="action in feature.actions"  class="primary block"  v-link=" '/usuario/productos/' + feature.mainroute " >
                 {{ action.title }}
               </button>
             </div>
