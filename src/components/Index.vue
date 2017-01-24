@@ -1,4 +1,5 @@
 <template>
+  <!-- Esto no se usa -->
   <q-layout>
     <div slot="header" class="toolbar">
       <button
@@ -19,7 +20,7 @@
     <q-drawer ref="drawer" >
       <div class="toolbar">
         <q-toolbar-title>
-          Drawer Title
+          Hispano Club
         </q-toolbar-title>
       </div>
       <drawerMenu>

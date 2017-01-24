@@ -6,6 +6,8 @@ import registrar from './components/views/public/registrar'
 import recuperarContrasena from './components/views/public/recuperarContrasena'
 import Home from './components/views/private/Home'
 import generic from './components/views/private/productos/generic'
+import Landing from './components/views/private/user/Landing'
+import Store from './components/views/private/store/Store'
 
 Vue.use(VueRouter)
 
@@ -45,11 +47,19 @@ export default new VueRouter({
       component: recuperarContrasena,
       name: 'recuperar-contrasena'
     },
+    // toda las rutas privadas van dentro del usuario
     {
       path: '/usuario',
       component: Home,
-      name: 'usuario',
+      // name: 'usuario',
       children: [
+        {
+          path: '',
+          components: {
+            main: Landing
+          },
+          name: 'Landing'
+        },
         {
           path: 'perfil',
           components: {
@@ -70,8 +80,16 @@ export default new VueRouter({
             main: generic
           },
           name: 'producto'
+        },
+        // tienda
+        {
+          path: 'tienda',
+          components: {
+            main: Store
+          },
+          name: 'Tienda'
         }
       ]
-    } // Not found
+    }
   ]
 })

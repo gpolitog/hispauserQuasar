@@ -82,9 +82,20 @@
       },
       handler () {
         console.log('click')
+        var self = this
         Dialog.create({
-          title: 'Alert',
-          message: 'Modern HTML5 Single Page Application front-end framework on steroids.'
+          title: 'Registra a un miembro de tu familia',
+          message: '¿Estas listo para registrar a un miembro de tu familia ?',
+          buttons: [
+            'Cancel',
+            {
+              label: 'Registrar',
+              handler () {
+                self.$router.push({path: '/usuario/tienda'})
+                // empty the trash bin, yo
+              }
+            }
+          ]
         })
       }
     },

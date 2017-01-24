@@ -9,9 +9,9 @@
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, suscipit?
             </p>
-            <button class="primary raised">
+<!--             <button class="primary raised">
               Ingresa con tu cuenta de Facebook
-            </button>
+            </button> -->
           </div>
           <div class="card-content">
             <p>
@@ -68,6 +68,8 @@ export default {
     align-items: center;
     justify-content: center;
     min-height:100vh;
+    background-image: url('https://static.pexels.com/photos/175994/pexels-photo-175994.jpeg');
+    background-size: cover;
     .login-block {
       min-width: 40%;
       .card {

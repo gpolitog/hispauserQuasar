@@ -5,46 +5,50 @@
       <div class="login-block">
         <div class="card">
           <div class="card-title">
-            <big>Registra tu cuenta Hispano Club</big>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, suscipit?
-            </p>
+            <big>Activa tu membresía Hispano Club</big>
           </div>
           <div class="card-content">
             <form action="">
+              <p>
+              Por favor confirma y corrige tus datos
+            </p>
               <div class="floating-label">
-                <input required class="full-width">
-                <label>Usuario</label>
-              </div>
-
-              <div class="floating-label">
-                <input required class="full-width">
+                <input required class="full-width"  v-model="user.correo" >
                 <label>Correo electrónico</label>
               </div>
 
               <div class="floating-label">
-                <input required class="full-width">
+                <input required class="full-width"  v-model="user.nombre" >
                 <label for="">Nombre</label>
               </div>
 
               <div class="floating-label">
-                <input required class="full-width">
+                <input required class="full-width"  v-model="user.apellido" >
                 <label for="">Apellido</label>
               </div>
 
               <div class="floating-label">
-                <input required class="full-width">
+                <input required class="full-width"  v-model="user.telefono" >
                 <label for="">Teléfono</label>
               </div>
 
-              <div class="floating-label">
+              <!-- <div class="floating-label">
                 <input required class="full-width">
                 <label for="">Edad</label>
-              </div>
+              </div> -->
 
-              <div class="floating-label">
+              <!-- <div class="floating-label">
                 <input required class="full-width">
                 <label for="">Número de tarjeta Hispano Club</label>
+              </div> -->
+              <div class="margin-l-top">
+                <p>
+                  Por favor selecciona tu nombre de usuario y contraseña
+                </p>  
+              </div>
+              <div class="floating-label">
+                <input required class="full-width">
+                <label>Usuario</label>
               </div>
 
               <div class="floating-label">
@@ -57,14 +61,17 @@
                 <label for="">Repetir contraseña</label>
               </div>
 
-              <label>
+              <!-- <label>
                 <q-checkbox></q-checkbox>
                 Checkbox Label
-              </label>
+              </label> -->
 
             </form>
           </div>
           <div class="card-actions text-right">
+            <button class="white block">
+              Ayuda
+            </button>
             <button class="white block">
               Cancelar
             </button>
@@ -74,7 +81,7 @@
             </button>
 
             <button class="primary raised block">
-              Registrar
+              Activar membresía
             </button>
 
 
@@ -88,7 +95,14 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+      user: {
+        nombre: 'Juan',
+        apellido: 'Perez',
+        correo: 'usuario@dominio.com',
+        telefono: '5555 5555'
+      }
+    }
   }
 }
 </script>

@@ -16,7 +16,7 @@
     <!-- <q-drawer ref="drawer" > -->
       <div class="toolbar">
         <q-toolbar-title>
-          Drawer Title
+          Hispano Club
         </q-toolbar-title>
       </div>
       <drawerMenu>
@@ -24,16 +24,16 @@
     </q-drawer>
 
     <div class="layout-view">
-      <productosListaCards v-if="this.$route.path === '/usuario'">
-      </productosListaCards>
+      
 
       <q-transition name="slide">
         <router-view  name="main">
         </router-view>
+        <router-view name="secondary">
+        </router-view>
       </q-transition>
 
-      <router-view name="secondary">
-      </router-view>
+      
 
     </div>
 
@@ -43,7 +43,6 @@
 
 <script>
 import drawerMenu from '../../modules/drawerMenu'
-import productosListaCards from '../../modules/productosListaCards'
 
 export default {
   data () {
@@ -63,8 +62,7 @@ export default {
     }
   },
   components: {
-    drawerMenu,
-    productosListaCards
+    drawerMenu
   }
 }
 </script>

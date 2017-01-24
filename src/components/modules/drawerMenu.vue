@@ -16,8 +16,12 @@
     <q-drawer-link icon="mail" :to="{path: '/usuario', exact: true}">
       Usuario
     </q-drawer-link>
-    <q-drawer-link icon="mail" :to="{path: '/usuario/productos', exact: true}">
+<!--     <q-drawer-link icon="mail" :to="{path: '/usuario/productos', exact: true}">
       Productos
+    </q-drawer-link> -->
+
+    <q-drawer-link icon="mail" :to="{path: '/usuario/tienda', exact: true}">
+      Tienda
     </q-drawer-link>
 
     <div v-for="feature in features">
