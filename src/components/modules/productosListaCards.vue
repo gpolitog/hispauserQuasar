@@ -1,8 +1,5 @@
 <template>
-  <div class="page-content">
-      <pageHeaderUser pageTitle="Usuarios" pageDescription="" >
-      </pageHeaderUser>
-
+  <div class="page-content">      
       <div class="layout-padding">
         <div class="infinite-scroll-activated">
           <div class="card infinite-item" v-for="feature in features">
@@ -23,7 +20,6 @@
 </template>
 
 <script>
-  import pageHeaderUser from './pageHeaderUser'
   export default {
     data () {
       return {
@@ -31,7 +27,6 @@
       }
     },
     components: {
-      pageHeaderUser
     }
   }
 </script>

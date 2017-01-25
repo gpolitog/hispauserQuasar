@@ -1,9 +1,24 @@
 <template>
-  <!-- root node required -->
   <div>
-    <!-- your content -->
+    <q-tabs  class="justified inverted red"> 
+      <q-tab route="/usuario/perfil" exact >
+        Perfil
+      </q-tab>
+      <q-tab  route="/usuario/perfil/direcciones" exact >
+        Direcciones
+      </q-tab>
+      <q-tab  route="/usuario/perfil/metodo-pago" exact >
+        Metodos de pago
+      </q-tab>
+      <q-tab  route="/usuario/perfil/direccion-tarjeta" exact >
+        Dirección de tarjetas
+      </q-tab>
+    </q-tabs>
     <div class="layout-padding">
-      <!-- if you want automatic padding -->
+      <q-transition name="slide">
+        <router-view  name="PerfilTop">
+        </router-view>
+      </q-transition>
     </div>
   </div>
 </template>
@@ -11,9 +26,13 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+    }
+  },
+  components: {
   }
 }
+
 </script>
 
 <style>

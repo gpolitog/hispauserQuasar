@@ -12,6 +12,10 @@
         </router-link>
       </q-toolbar-title>
 
+      <button class="" v-link="'usuario/perfil'">
+        <i>face</i>
+      </button>
+
       <button ref="target" class="">
         <i>apps</i>
         <q-popover ref="HispanoApps">
@@ -54,15 +58,12 @@
 
     <div class="layout-view">
       
-
       <q-transition name="slide">
         <router-view  name="main">
         </router-view>
         <router-view name="secondary">
         </router-view>
       </q-transition>
-
-      
 
     </div>
 

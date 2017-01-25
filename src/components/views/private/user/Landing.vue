@@ -1,8 +1,13 @@
 <template>
   <!-- root node required -->
   <div>
+    
+    <pageHeaderUser pageTitle="Usuarios" pageDescription="" >
+    </pageHeaderUser>
+
     <productosListaCards >
     </productosListaCards>
+
     <div class="layout-padding">
       <div class="row gutter sm-column">
         <div class="width-2of3">
@@ -48,6 +53,7 @@
 </template>
 
 <script>
+import pageHeaderUser from '../../../modules/pageHeaderUser'
 import productosListaCards from '../../../modules/productosListaCards'
 
 export default {
@@ -55,6 +61,7 @@ export default {
     return {}
   },
   components: {
+    pageHeaderUser,
     productosListaCards
   }
 
