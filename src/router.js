@@ -1,13 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Index from './components/Index'
+
+// Public
+// login y registro
 import ingresar from './components/views/public/ingresar'
 import registrar from './components/views/public/registrar'
 import recuperarContrasena from './components/views/public/recuperarContrasena'
-import Home from './components/views/private/Home'
-import generic from './components/views/private/productos/generic'
-import Landing from './components/views/private/user/Landing'
-import Store from './components/views/private/store/Store'
+
+// Private
+import Home from './components/views/private/Home' // layout de private
+import Landing from './components/views/private/user/Landing' // landing al entrar
+import generic from './components/views/private/productos/generic' // vista generica de productos
+
+// paginas de la tienda
+import Store from './components/views/private/store/Store' // layout de la tienda
+import ProductFeed from './components/views/private/store/ProductFeed' // Landing de la tienda
+import Carrito from './components/views/private/store/Carrito' // Carrito
+import Pagar from './components/views/private/store/Pagar' // Pago y envio
 
 Vue.use(VueRouter)
 
@@ -87,7 +97,27 @@ export default new VueRouter({
           components: {
             main: Store
           },
-          name: 'Tienda'
+          // name: 'Tienda'
+          children: [
+            {
+              path: '',
+              components: {
+                StoreTop: ProductFeed
+              }
+            },
+            {
+              path: 'carrito',
+              components: {
+                StoreTop: Carrito
+              }
+            },
+            {
+              path: 'pagar',
+              components: {
+                StoreTop: Pagar
+              }
+            }
+          ]
         }
       ]
     }

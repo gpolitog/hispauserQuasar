@@ -3,6 +3,9 @@
   <div>
     <div id="login">
       <div class="login-block">
+        <div class="padding-m" style="text-align:center">
+          <img src="statics/logo-big-big.png" alt="" width="250px">  
+        </div>
         <div class="card">
           <div class="card-title">
             <big>Ingresa a tu cuenta Hispano Club</big>
@@ -63,6 +66,9 @@ export default {
 <style lang="scss">
   $bg: #cbcbc;
   $white: #ffffff;
+  button {
+    text-shadow:none !important;
+  }
   #login {
     display: flex;
     align-items: center;

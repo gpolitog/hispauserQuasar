@@ -82,6 +82,9 @@
       // call again the method if the route changes
       '$route': 'fetchData'
     },
+    mounted () {
+
+    },
     methods: {
       fetchData () {
         this.post = this.$store.getters.currentProduct

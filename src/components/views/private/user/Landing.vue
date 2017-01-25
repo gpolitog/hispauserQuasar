@@ -8,7 +8,7 @@
         <div class="width-2of3">
           <div class="card">
             <div class="card-content">
-              <h5 class="padding-l-bottom">Nuestros ultimos descuentos</h5>
+              <h5 class="padding-l-bottom">Nuestros últimos descuentos</h5>
               <div class="card">
                 <div class="list striped">
                   <div class="item item-link" v-for="n in 6">
