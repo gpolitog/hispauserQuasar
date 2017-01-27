@@ -12,7 +12,7 @@
         </router-link>
       </q-toolbar-title>
 
-      <button class="" v-link="'usuario/perfil'">
+      <button class="" v-link="'/usuario/perfil'">
         <i>face</i>
       </button>
 

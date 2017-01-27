@@ -4,9 +4,19 @@
       <q-tab route="/usuario/perfil" exact >
         Perfil
       </q-tab>
+
+      <q-tab route="/usuario/perfil/contrasena" exact >
+        Contraseña
+      </q-tab>
+
+      <q-tab route="/usuario/perfil/notificaciones" exact >
+        Notificaciones
+      </q-tab>
+
       <q-tab  route="/usuario/perfil/direcciones" exact >
         Direcciones
       </q-tab>
+
       <q-tab  route="/usuario/perfil/metodo-pago" exact >
         Metodos de pago
       </q-tab>

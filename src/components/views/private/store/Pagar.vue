@@ -13,7 +13,7 @@
               </div>
               <div class="auto text-right">
 
-                <button class="primary"  v-link=" '/usuario/tienda/pagar'" >
+                <button class="primary"  v-link=" '/usuario/tienda/pago-resultado'" >
                   Finalizar pedido
                 </button>
               </div>
@@ -48,28 +48,14 @@
                 </div>
               </div>
             </div>
-            <b>Tu pedido</b>
-            <div class="list striped">
 
-              <div class="item multiple-lines" v-for="n in 3">
-                <i class="item-primary">supervisor_account</i>
+            <!-- Modulo con los datos del pedido -->
+            <StoreOrderModule>
+            </StoreOrderModule>
 
-                <div class="item-content">
-                  <div class="row  sm-column">
-                    <div class="auto">Beneficio adicional  {{n}}</div>
-                    <div class="auto text-left">
-                    </div>
-                    <div class="auto text-right">
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="card-actions text-right">
-            <button class="primary"  v-link=" '/usuario/tienda/pagar'" >
+            <button class="primary"  v-link=" '/usuario/tienda/pago-resultado'" >
               Finalizar pedido
             </button>
           </div>
@@ -79,8 +65,15 @@
 </template>
 
 <script>
+// encabezado
 import pageHeader from '../../../modules/pageHeader'
+
+// Modulo con los productos de la orden
+import StoreOrderModule from '../../../modules/StoreOrderModule'
+
+// Modulo con el feed de productos para venta cruzada
 import StoreProducts from '../../../modules/StoreProducts'
+
 export default {
   data () {
     return {
@@ -90,7 +83,8 @@ export default {
   },
   components: {
     pageHeader,
-    StoreProducts
+    StoreProducts,
+    StoreOrderModule
   }
 }
 </script>

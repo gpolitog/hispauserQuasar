@@ -25,6 +25,7 @@ import Store from './components/views/private/store/Store' // layout de la tiend
 import ProductFeed from './components/views/private/store/ProductFeed' // Landing de la tienda
 import Carrito from './components/views/private/store/Carrito' // Carrito
 import Pagar from './components/views/private/store/Pagar' // Pago y envio
+import PagoResultado from './components/views/private/store/PagoResultado' // Pago y envio
 
 Vue.use(VueRouter)
 
@@ -86,7 +87,8 @@ export default new VueRouter({
             {
               path: '', // Vacio por que es el default del componente
               components: {
-                PerfilTop: PerfilLanding
+                PerfilTop: PerfilLanding,
+                PerfilBottom: PerfilDirecciones
               },
               name: 'Perfil'
             },
@@ -151,6 +153,12 @@ export default new VueRouter({
               path: 'pagar',
               components: {
                 StoreTop: Pagar
+              }
+            },
+            {
+              path: 'pago-resultado',
+              components: {
+                StoreTop: PagoResultado
               }
             }
           ]
