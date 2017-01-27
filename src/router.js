@@ -16,9 +16,14 @@ import generic from './components/views/private/productos/generic' // vista gene
 // Perfil
 import Perfil from './components/views/private/user/Perfil' // layout de la tienda
 import PerfilLanding from './components/views/private/user/PerfilLanding' // layout de la tienda
-import PerfilDirecciones from './components/views/private/user/PerfilDirecciones' // layout de la tienda
-import PerfilDireccionTarjeta from './components/views/private/user/PerfilDireccionTarjeta' // layout de la tienda
+import PerfilPassword from './components/views/private/user/PerfilPassword' // layout de la tienda
+import PerfilNotificaciones from './components/views/private/user/PerfilNotificaciones' // layout de la tienda
 import PerfilMetodosPago from './components/views/private/user/PerfilMetodosPago' // layout de la tienda
+
+// Familia
+import Familia from './components/views/private/familia/Familia' // layout de la tienda
+import FamiliaLanding from './components/views/private/familia/FamiliaLanding' // layout de la tienda
+import FamiliaAdd from './components/views/private/familia/FamiliaAdd' // layout de la tienda
 
 // paginas de la tienda
 import Store from './components/views/private/store/Store' // layout de la tienda
@@ -87,17 +92,23 @@ export default new VueRouter({
             {
               path: '', // Vacio por que es el default del componente
               components: {
-                PerfilTop: PerfilLanding,
-                PerfilBottom: PerfilDirecciones
+                PerfilTop: PerfilLanding
               },
               name: 'Perfil'
             },
             {
-              path: 'direcciones', // Vacio por que es el default del componente
+              path: 'contrasena', // Vacio por que es el default del componente
               components: {
-                PerfilTop: PerfilDirecciones
+                PerfilTop: PerfilPassword
               },
-              name: 'Direcciones'
+              name: 'Contrasena'
+            },
+            {
+              path: 'notificaciones', // Vacio por que es el default del componente
+              components: {
+                PerfilTop: PerfilNotificaciones
+              },
+              name: 'Notificaciones'
             },
             {
               path: 'metodo-pago', // Vacio por que es el default del componente
@@ -105,13 +116,26 @@ export default new VueRouter({
                 PerfilTop: PerfilMetodosPago
               },
               name: 'MetodosPago'
+            }
+          ]
+        },
+        {
+          path: 'familia',
+          components: {
+            main: Familia
+          },
+          children: [
+            {
+              path: '',
+              components: {
+                FamiliaTop: FamiliaLanding
+              }
             },
             {
-              path: 'direccion-tarjeta', // Vacio por que es el default del componente
+              path: 'agregar',
               components: {
-                PerfilTop: PerfilDireccionTarjeta
-              },
-              name: 'DireccionPago'
+                FamiliaTop: FamiliaAdd
+              }
             }
           ]
         },

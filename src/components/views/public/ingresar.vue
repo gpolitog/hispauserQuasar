@@ -74,7 +74,7 @@ export default {
     align-items: center;
     justify-content: center;
     min-height:100vh;
-    background-image: url('https://static.pexels.com/photos/175994/pexels-photo-175994.jpeg');
+    background-image: url('~/statics/bg-ingresar.jpg');
     background-size: cover;
     .login-block {
       min-width: 40%;

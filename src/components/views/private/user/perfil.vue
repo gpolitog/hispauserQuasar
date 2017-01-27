@@ -13,16 +13,10 @@
         Notificaciones
       </q-tab>
 
-      <q-tab  route="/usuario/perfil/direcciones" exact >
-        Direcciones
-      </q-tab>
-
       <q-tab  route="/usuario/perfil/metodo-pago" exact >
         Metodos de pago
       </q-tab>
-      <q-tab  route="/usuario/perfil/direccion-tarjeta" exact >
-        Dirección de tarjetas
-      </q-tab>
+
     </q-tabs>
     <div class="layout-padding">
       <q-transition name="slide">

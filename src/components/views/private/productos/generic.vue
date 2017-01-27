@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <div class="page-content" v-for="item in post">
       <pageHeader :pageTitle=" item.title " :pageDescription="item.description" >
       </pageHeader>
@@ -61,16 +61,21 @@
 
 <script>
   import pageHeader from '../../../modules/pageHeader'
+  import { Dialog } from 'quasar'
 
   export default {
     data () {
       return {
-        post: []
+        post: [],
+        currentPost: true
       }
     },
     computed: {
       titulopagina () {
         return this.$store.state.currentPageTitle
+      },
+      isFullfilled () {
+        return this.currentPost.isConfigured
       }
     },
     created () {
@@ -80,6 +85,7 @@
     },
     watch: {
       // call again the method if the route changes
+      'currentPost.isConfigured': 'handler',
       '$route': 'fetchData'
     },
     mounted () {
@@ -89,10 +95,63 @@
       fetchData () {
         this.post = this.$store.getters.currentProduct
         var current
+        var elPost
         this.post.forEach(function (element) {
           current = element.title
+          elPost = element
         })
+        this.currentPost = elPost
         this.$store.commit('ACTUALIZATITULO', current)
+      },
+      handler () {
+        console.log('click')
+        var self = this
+        Dialog.create({
+          title: 'Necesitas configurar este producto antes de poder usarlo',
+          form: {
+            name: {
+              type: 'textbox',
+              label: 'Textbox',
+              model: ''
+            },
+            pass: {
+              type: 'password',
+              label: 'Password',
+              model: ''
+            },
+            age: {
+              type: 'numeric',
+              label: 'Numeric',
+              model: 10,
+              min: 1,
+              max: 100
+            },
+            tags: {
+              type: 'chips',
+              label: 'Chips',
+              model: ['Joe', 'John']
+            },
+            comments: {
+              type: 'textarea',
+              label: 'Textarea',
+              model: ''
+            }
+          },
+          buttons: [
+            'Cancel',
+            {
+              label: 'Ok',
+              handler (data) {
+                // Toast.create('Returned ' + JSON.stringify(data))
+                // data.name is 'Quasar'
+                // data.pass is 'rulz!'
+                // data.age is 1
+                // data.tags is ['Joe', 'John'],
+                // data.comments is 'Some comments...'
+              }
+            }
+          ]
+        })
       }
     },
     components: {

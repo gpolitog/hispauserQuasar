@@ -91,7 +91,7 @@
             {
               label: 'Registrar',
               handler () {
-                self.$router.push({path: '/usuario/tienda'})
+                self.$router.push({path: '/usuario/familia/agregar'})
                 // empty the trash bin, yo
               }
             }

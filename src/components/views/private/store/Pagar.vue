@@ -24,7 +24,7 @@
                 <div class="padding-xxs-top margin-xxs-top">
                   <b>Dirección de envio</b>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veniam in ex, ab rem laudantium illo est voluptatem id vitae.</p>
-                  <router-link to="/usuario/perfil/direcciones">
+                  <router-link to="/usuario/perfil">
                     Cambiar dirección
                   </router-link>
                 </div>
@@ -38,7 +38,7 @@
                   </router-link>
                 </div>
               </div>
-              <div class="auto">
+<!--               <div class="auto">
                 <div class="padding-xxs-top margin-xxs-top">
                   <b>Dirección de la tarjeta</b>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veniam in ex, ab rem laudantium illo est voluptatem id vitae.</p>
@@ -46,7 +46,7 @@
                     Cambiar dirección
                   </router-link>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <!-- Modulo con los datos del pedido -->

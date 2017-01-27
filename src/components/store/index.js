@@ -77,6 +77,8 @@ const state = {
   features: [
     {
       id: 0,
+      avaiable: true,
+      isConfigured: true,
       title: 'Llama al Doctor',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
@@ -91,6 +93,8 @@ const state = {
     },
     {
       id: 1,
+      avaiable: true,
+      isConfigured: true,
       title: 'Red de Descuentos',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
@@ -105,6 +109,8 @@ const state = {
     },
     {
       id: 2,
+      avaiable: false,
+      isConfigured: true,
       title: 'Salud Dental',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
@@ -119,6 +125,8 @@ const state = {
     },
     {
       id: 3,
+      avaiable: false,
+      isConfigured: true,
       title: 'Salud Visual',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',
@@ -133,6 +141,8 @@ const state = {
     },
     {
       id: 4,
+      avaiable: true,
+      isConfigured: false,
       title: 'Repatriación funeraria',
       subtitle: 'Lorem ipsum dolor.',
       description: 'Lorem ipsum dolor sit.',

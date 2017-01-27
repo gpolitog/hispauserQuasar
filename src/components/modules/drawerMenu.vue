@@ -11,6 +11,10 @@
       Tienda
     </q-drawer-link>
 
+    <q-drawer-link icon="mail" :to="{path: '/usuario/familia', exact: true}">
+      Familia
+    </q-drawer-link>
+
     <div v-for="feature in features">
       <q-drawer-link icon="mail" :to="{path: '/usuario/productos/' +feature.mainroute, exact: true}">
         {{ feature.title }}
